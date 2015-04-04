@@ -1,4 +1,4 @@
-BrainbeatsEngineJS
+PropertyControls JS
 ==========
 
 ### Installation
