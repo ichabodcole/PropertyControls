@@ -26,13 +26,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
         'lib/**/*.js',
-        // { pattern: 'lib/test.js' },
-        // './node_modules/babelify/node_modules/babel-core/browser-polyfill.js',
-        //{ pattern: 'lib/test.js', included:false, served: true },
-        // { pattern: 'lib/property-controls/**/*.js', included:false, served: true },
         'test/specs/**/*.spec.js'
-        // 'test/specs/property-controls/**/*.spec.js'
-        // { pattern: 'test/specs/test.spec.js', included:false, served: true }
     ],
 
 
