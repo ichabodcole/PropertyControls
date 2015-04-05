@@ -1,8 +1,5 @@
 import { OmniControl, OmniControlEvent } from '../../../lib/property-controls/OmniControl';
 import { ControlTypes } from '../../../lib/property-controls/constants';
-//import RangeControl from '../../../../src/soundscape/property-controls/base-control';
-//import FollowControl from '../../../../src/soundscape/property-controls/follow-control';
-//import GraphControl from '../../../../src/soundscape/property-controls/graph-control';
 
 describe ('OmniControl', function () {
     var omniCtrl, options;
@@ -38,7 +35,7 @@ describe ('OmniControl', function () {
 
     describe('properties', function() {
 
-        xdescribe('max', function() {
+        describe('max', function() {
             it('should set the models max property and the max properties of all sub controls', function() {
                 omniCtrl.max = 12;
                 expect(omniCtrl.model.max).toBe(12);
@@ -46,12 +43,11 @@ describe ('OmniControl', function () {
 
             it('should set the max property for all sub controls', function(){
                 omniCtrl.max = 12;
-                console.log(omniCtrl.controlType);
                 expect(omniCtrl.control.max).toBe(omniCtrl.max);
             });
         });
 
-       xdescribe('min', function() {
+       describe('min', function() {
             it('should set the models min property and the min properties of all sub controls', function() {
                 omniCtrl.min = 5;
                 expect(omniCtrl.model.min).toBe(5);
