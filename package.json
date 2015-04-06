@@ -4,7 +4,7 @@
   "author": "Cole Reed",
   "description": "Event based property controls",
   "filename": "property-controls",
-  "main": "lib/property-controls/OmniControl.js",
+  "main": "lib/index.js",
   "browserify": {
     "transform": [
       "babelify"
