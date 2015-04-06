@@ -1,6 +1,6 @@
 import BaseControl from '../../../lib/property-controls/BaseControl';
 import { GraphControl, GraphControlEvent } from '../../../lib/property-controls/GraphControl';
-import { Interpolation } from '../../../lib/common/math';
+import { Interpolation } from '../../../lib/interpolation';
 
 describe ('GraphControl', function () {
     var gc, timer, options, model, listener;

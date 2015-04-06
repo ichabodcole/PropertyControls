@@ -1,4 +1,4 @@
-import utils from '../../../lib/services/utils';
+import utils from '../../lib/utils';
 
 describe('utils', function () {
 
