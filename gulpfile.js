@@ -18,8 +18,8 @@ var config = require('./build.config.js');
 
 // var $ = require('gulp-load-plugins')();
 
-gulp.task('tdd', tdd);
-gulp.task('test', test);
+gulp.task('tdd', ['jshint'], tdd);
+gulp.task('test', ['jshint'], test);
 gulp.task('jshint', jshint);
 
 // function serve() {
@@ -86,3 +86,5 @@ function handleError(err) {
     process.stdout.write('\x07');
     this.emit('end');
 }
+
+gulp.watch('lib/**/*.js', ['jshint']);
