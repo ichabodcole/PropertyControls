@@ -1,5 +1,5 @@
 import { OmniControl, OmniControlEvent } from '../../../lib/property-controls/OmniControl';
-import { ControlTypes } from '../../../lib/property-controls/constants';
+import { ControlTypes } from '../../../lib/constants';
 
 describe ('OmniControl', function () {
     var omniCtrl, options;
