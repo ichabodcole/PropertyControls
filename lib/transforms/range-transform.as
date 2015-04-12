@@ -1,3 +1,5 @@
+'use strict';
+
 import Transform from './transform';
 
 export class RangeTransform extends Transform {
