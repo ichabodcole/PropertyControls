@@ -1,5 +1,6 @@
-import BaseControl from '../../../lib/property-controls/BaseControl';
-import { FollowControl, FollowControlEvent } from '../../../lib/property-controls/FollowControl';
+import { ControlEvents } from '../../lib/constants';
+import BaseControl from '../../lib/controls/BaseControl';
+import FollowControl from '../../lib/controls/FollowControl';
 
 describe ('FollowControl', function () {
     var fc, options, model, listener, noop;
@@ -119,7 +120,7 @@ describe ('FollowControl', function () {
                 spyOn(bc, 'on');
                 fc.target = bc;
                 fc.start();
-                expect(fc.target.on).toHaveBeenCalledWith(FollowControlEvent.VALUE_CHANGE, fc.__targetListener);
+                expect(fc.target.on).toHaveBeenCalledWith(ControlEvents.VALUE_CHANGE, fc.__targetListener);
             });
 
             it ('should not do anything if a target is has not been set when called', function () {
@@ -133,7 +134,7 @@ describe ('FollowControl', function () {
                 spyOn(fc, 'emit');
                 fc.target = bc;
                 fc.start();
-                expect(fc.emit).toHaveBeenCalledWith(FollowControlEvent.START);
+                expect(fc.emit).toHaveBeenCalledWith(ControlEvents.START);
             });
         });
 
@@ -147,7 +148,7 @@ describe ('FollowControl', function () {
                 fc.target = bc;
                 fc.start();
                 fc.stop();
-                expect(fc.target.removeListener).toHaveBeenCalledWith(FollowControlEvent.VALUE_CHANGE, fc.__targetListener);
+                expect(fc.target.removeListener).toHaveBeenCalledWith(ControlEvents.VALUE_CHANGE, fc.__targetListener);
             });
 
             it ('should do nothing if a targetToken has not been set', function () {
@@ -162,7 +163,7 @@ describe ('FollowControl', function () {
                 fc.target = bc;
                 fc.start();
                 fc.stop();
-                expect(fc.emit).toHaveBeenCalledWith(FollowControlEvent.STOP);
+                expect(fc.emit).toHaveBeenCalledWith(ControlEvents.STOP);
             });
         });
 

@@ -1,5 +1,5 @@
-import { OmniControl, OmniControlEvent } from '../../../lib/property-controls/OmniControl';
-import { ControlTypes } from '../../../lib/constants';
+import { ControlTypes, ControlEvents } from '../../lib/constants';
+import OmniControl from '../../lib/controls/OmniControl';
 
 describe ('OmniControl', function () {
     var omniCtrl, options;
@@ -86,7 +86,7 @@ describe ('OmniControl', function () {
                 it('should emit the CONTROL_TYPE_CHANGE event', function() {
                     spyOn(omniCtrl, 'emit');
                     omniCtrl.controlType = ControlTypes.FOLLOW_CONTROL;
-                    expect(omniCtrl.emit).toHaveBeenCalledWith(OmniControlEvent.CONTROL_TYPE_CHANGE, { controlType:ControlTypes.FOLLOW_CONTROL });
+                    expect(omniCtrl.emit).toHaveBeenCalledWith(ControlEvents.CONTROL_TYPE_CHANGE, { controlType:ControlTypes.FOLLOW_CONTROL });
                 });
 
                 it('should not broadcast the CONTROL_TYPE_CHANGE if set to the same type of control', function() {
