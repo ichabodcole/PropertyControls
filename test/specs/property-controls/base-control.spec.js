@@ -1,4 +1,5 @@
-import { BaseControl, BaseControlEvent } from '../../../lib/property-controls/BaseControl';
+import { ControlEvents } from '../../../lib/constants';
+import BaseControl from '../../../lib/property-controls/BaseControl';
 
 describe ('BaseControl', function () {
     var bc, options, listener, model, myTransform;
@@ -99,7 +100,7 @@ describe ('BaseControl', function () {
                 it ('should emit a VALUE_CHANGE event', function() {
                     spyOn(bc, 'emit');
                     bc.percent = 0.65;
-                    expect(bc.emit).toHaveBeenCalledWith(BaseControlEvent.VALUE_CHANGE, jasmine.any(Object));
+                    expect(bc.emit).toHaveBeenCalledWith(ControlEvents.VALUE_CHANGE, jasmine.any(Object));
                 });
 
                 it ('should not emit a VALUE_CHANGE event if percent has not changed', function() {
@@ -198,7 +199,7 @@ describe ('BaseControl', function () {
                 it ('should emit a VALUE_CHANGE event', function() {
                     spyOn(bc, 'emit');
                     bc.value = 0.65;
-                    expect(bc.emit).toHaveBeenCalledWith(BaseControlEvent.VALUE_CHANGE, jasmine.any(Object));
+                    expect(bc.emit).toHaveBeenCalledWith(ControlEvents.VALUE_CHANGE, jasmine.any(Object));
                 });
 
                 it ('should not emit a VALUE_CHANGE event if value has not changed', function() {
@@ -417,7 +418,7 @@ describe ('BaseControl', function () {
                     };
 
                     bc.emitChangeEvent();
-                    expect(bc.emit).toHaveBeenCalledWith(BaseControlEvent.VALUE_CHANGE, returnObj);
+                    expect(bc.emit).toHaveBeenCalledWith(ControlEvents.VALUE_CHANGE, returnObj);
                 });
             });
 
@@ -429,7 +430,7 @@ describe ('BaseControl', function () {
                 it('should emit an DESTROY event', function() {
                     spyOn(bc, 'emit');
                     bc.destroy();
-                    expect(bc.emit).toHaveBeenCalledWith(BaseControlEvent.DESTROY);
+                    expect(bc.emit).toHaveBeenCalledWith(ControlEvents.DESTROY);
                 });
             });
         });

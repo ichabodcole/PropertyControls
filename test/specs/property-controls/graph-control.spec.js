@@ -1,6 +1,7 @@
+import { ControlEvents } from '../../../lib/constants';
 import BaseControl from '../../../lib/property-controls/BaseControl';
-import { GraphControl, GraphControlEvent } from '../../../lib/property-controls/GraphControl';
-import { Interpolation } from '../../../lib/interpolation';
+import GraphControl from '../../../lib/property-controls/GraphControl';
+import Interpolation from '../../../lib/interpolation';
 
 describe ('GraphControl', function () {
     var gc, timer, options, model, listener;
@@ -102,7 +103,7 @@ describe ('GraphControl', function () {
                 it ('should call the events broadcast method', function () {
                     spyOn(gc, 'emit');
                     gc.addPoints({});
-                    expect(gc.emit).toHaveBeenCalledWith(GraphControlEvent.ADD_POINTS, gc.points);
+                    expect(gc.emit).toHaveBeenCalledWith(ControlEvents.ADD_POINTS, gc.points);
                 });
             });
 
@@ -130,7 +131,7 @@ describe ('GraphControl', function () {
                 it ('should call the events broadcast method', function () {
                     spyOn(gc, 'emit');
                     gc.removePoint(1);
-                    expect(gc.emit).toHaveBeenCalledWith(GraphControlEvent.REMOVE_POINT, gc.points);
+                    expect(gc.emit).toHaveBeenCalledWith(ControlEvents.REMOVE_POINT, gc.points);
                 });
             });
 
