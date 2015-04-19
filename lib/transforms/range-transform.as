@@ -2,7 +2,7 @@
 
 import Transform from './transform';
 
-export class RangeTransform extends Transform {
+class RangeTransform extends Transform {
     constructor(min, max) {
         this.min = min;
         this.max = max;
@@ -19,4 +19,5 @@ export class RangeTransform extends Transform {
     }
 }
 
+export { RangeTransform };
 export default RangeTransform;

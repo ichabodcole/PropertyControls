@@ -1,5 +1,5 @@
-import { ControlEvents } from '../../../lib/constants';
-import BaseControl from '../../../lib/property-controls/BaseControl';
+import { ControlEvents } from '../../lib/constants';
+import BaseControl from '../../lib/controls/BaseControl';
 
 describe ('BaseControl', function () {
     var bc, options, listener, model, myTransform;

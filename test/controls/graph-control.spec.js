@@ -1,7 +1,7 @@
-import { ControlEvents } from '../../../lib/constants';
-import BaseControl from '../../../lib/property-controls/BaseControl';
-import GraphControl from '../../../lib/property-controls/GraphControl';
-import Interpolation from '../../../lib/interpolation';
+import { ControlEvents } from '../../lib/constants';
+import BaseControl from '../../lib/controls/BaseControl';
+import GraphControl from '../../lib/controls/GraphControl';
+import Interpolation from '../../lib/interpolation';
 
 describe ('GraphControl', function () {
     var gc, timer, options, model, listener;

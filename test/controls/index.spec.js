@@ -1,4 +1,4 @@
-import * as PropertyControls from '../../../lib/index';
+import * as PropertyControls from '../../lib/index';
 
 describe('Exporting the library', function() {
     describe('RangeControl', function() {

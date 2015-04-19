@@ -1,6 +1,6 @@
-import { ControlEvents } from '../../../lib/constants';
-import BaseControl from '../../../lib/property-controls/BaseControl';
-import FollowControl from '../../../lib/property-controls/FollowControl';
+import { ControlEvents } from '../../lib/constants';
+import BaseControl from '../../lib/controls/BaseControl';
+import FollowControl from '../../lib/controls/FollowControl';
 
 describe ('FollowControl', function () {
     var fc, options, model, listener, noop;
