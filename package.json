@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "author": "Cole Reed",
   "description": "Event based property controls",
-  "filename": "property-controls",
   "main": "lib/index.js",
   "browserify": {
     "transform": [
@@ -20,24 +19,10 @@
   "devDependencies": {
     "babelify": "^5.0.4",
     "beepbeep": "^1.2.0",
-    "browser-sync": "^2.4.0",
     "browserify": "^9.0.4",
-    "del": "^0.1.3",
-    "event-stream": "^3.1.7",
     "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^1.0.0",
-    "gulp-bower-files": "^0.2.7",
-    "gulp-changed": "^1.0.0",
-    "gulp-concat": "^2.4.1",
-    "gulp-inject": "^1.0.2",
     "gulp-jshint": "^1.8.4",
-    "gulp-livereload": "^2.1.1",
     "gulp-load-plugins": "^0.7.0",
-    "gulp-order": "^1.1.1",
-    "gulp-plumber": "^0.6.5",
-    "gulp-sass": "^0.7.3",
-    "gulp-sourcemaps": "^1.2.4",
-    "gulp-uglify": "^1.0.1",
     "jasmine-core": "^2.0.4",
     "jshint-stylish": "^1.0.0",
     "karma": "^0.12.31",
@@ -50,11 +35,7 @@
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-phantomjs-shim": "^1.0.0",
     "proxy-middleware": "^0.5.1",
-    "require-dir": "^0.1.0",
-    "streamify": "^0.2.4",
-    "vinyl-source-stream": "^1.0.0",
-    "watchify": "^2.0.0",
-    "wiredep": "^1.8.6"
+    "watchify": "^2.0.0"
   },
   "dependencies": {}
 }
