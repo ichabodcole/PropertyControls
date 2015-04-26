@@ -1,4 +1,4 @@
-import { ControlEvents } from '../../lib/constants';
+import { ControlEvents, ControlStates } from '../../lib/constants';
 import BaseControl from '../../lib/controls/BaseControl';
 import FollowControl from '../../lib/controls/FollowControl';
 
