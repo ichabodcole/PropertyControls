@@ -1,6 +1,6 @@
 {
   "name": "property-controls",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Cole Reed",
   "description": "Event based property controls",
   "main": "lib/index.js",
